@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-14_21-52-40",
+            "content": "@@ -18,24 +18,29 @@\n BC, abstract\n+class\n method;%0A%0Acla\n@@ -247,34 +247,14 @@\n name\n-%7D\n !\n+%7D\n %22)%0A%0A\n-    @abstractmethod%0A\n     \n@@ -293,28 +293,8 @@\n s;%0A%0A\n-    @abstractmethod%0A\n     \n@@ -1192,20 +1192,21 @@\n   Le%C3%A3o(%22\n-le%C3%A3o\n+Simba\n %22),%0A    \n@@ -1217,22 +1217,25 @@\n Falc%C3%A3o(%22\n-falc%C3%A3o\n+Peregrine\n %22),%0A    \n",
+            "lines": "66"
+        },
+        {
+            "label": "2025-12-14_22-06-58",
+            "content": "from abc import ABC, abstractmethod;\n\nclass Animal(ABC):\n    def __init__(self, name:str, ):\n        self.name = name;\n\n    def __str__(self):\n        return f\"{self.name}\";\n\n    def apresentar_nome(self):\n        print(f\"Eu sou um(a) {self.name}!\")\n\n    @abstractmethod\n    def fazer_Som(self):\n        pass;\n\n    @abstractmethod\n    def Mover(self):\n        pass;\n\nclass Le\u00e3o(Animal):\n    def __init__(self, name):\n        super().__init__(name);\n\n    def fazer_Som(self):\n        print(\"roaaaaaar!\");\n\n    def Mover(self):\n        print(\"O le\u00e3o caminha pela savana.\");\n\nclass Falc\u00e3o(Animal):\n    def __init__(self, name):\n        super().__init__(name);\n\n    def fazer_Som(self):\n        print(\"Hawk tuah!\");\n\n    def Mover(self):\n        print(\"O falc\u00e3o voa pelos ares.\");\n\nclass Dinossauro(Animal):\n    def __init__(self, name):\n        super().__init__(name);\n\n    def fazer_Som(self):\n        print(\"               \");\n\n    def Mover(self):\n        print(\"O dinossauro permanece exposto num museu.\");\n\ndef Apresentar(animal: Animal):\n    animal.apresentar_nome();\n    animal.fazer_Som();\n    animal.Mover();\n    print(f\"Tipo do animal: {type(animal).__name__}\");\n    print(\"-\" * 30);\n\ndef main():\n    animais = [\n        Le\u00e3o(\"le\u00e3o\"),\n        Falc\u00e3o(\"falc\u00e3o\"),\n        Dinossauro(\"T-Rex\")\n    ];\n\n    for animal in animais:\n        Apresentar(animal);\n\nmain();",
+            "lines": "68"
+        }
+    ]
+}
